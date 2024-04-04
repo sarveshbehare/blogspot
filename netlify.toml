@@ -3,5 +3,5 @@
   publish = "public" 
 
 [functions]
-  function = "api"  
+  [functions.api] 
 
