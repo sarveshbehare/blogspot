@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(41, 38, 38);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(41, 38, 38);
+    min-height: 92vh;
+    display:flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+ttle{
+    font-size: 2.5rem;
+    color: rgb(52, 244, 52);
+    padding: 1.2rem;
+}
+
+.contnt{
+    font-size: 1.2rem;
+    color: rgb(181, 120, 239);
+    width: 80%;
+}
+
+a, a:active, a:visited, a:link{
+    font-size: 1.2rem;
+    position: relative;
+    top: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}

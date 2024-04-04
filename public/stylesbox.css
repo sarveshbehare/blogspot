@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    color:rgb(67, 219, 29);
+    text-decoration: none;
+}
+
+h3{
+    font-size: 2rem;
+    color:yellowgreen;
+    padding-bottom: 1rem;
+}
+
+.typehere{
+    min-height: 40px;
+    background-color: rgb(69, 64, 64);
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid rgb(255, 0, 47)
+}
+
+.wid{
+    min-width: 30rem;
+}
+
+input{
+    text-align: center;
+}
+
+input[type=text]{
+    color: rgb(117, 237, 90);
+    font-size: 1.2rem;
+}
+
+input[type=submit]{
+    font-size: 1.5rem;
+    background-color: #34e0bf;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 0.3rem 1.5rem;
+}
+
+textarea{
+    color: rgb(191, 142, 241);
+    font-size: 1rem;
+    padding: 10px;
+}
+
+main{
+    text-align: center;
+    background-color: rgb(41, 38, 38);
+    min-height: 91vh;
+    display:flex;
+    flex-direction: column;
+    padding-top: 4rem;
+}
+
+#blogbox{
+    height: 300px;
+    width: 80%;
+}
