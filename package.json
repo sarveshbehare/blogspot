@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:lambda": "netlify-lambda serve lambda.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +12,5 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.19.2"
-  },
-  "devDependencies": {
-    "netlify-lambda": "^2.0.16",
-    "serverless-http": "^3.2.0"
   }
 }
