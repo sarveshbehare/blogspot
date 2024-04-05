@@ -2,18 +2,13 @@
 const express = require("express");     //do this to use DOM js and no need to write "type": "module" in package.json file
 
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const serverless = require('serverless-http');
 const app = express();
-const port = process.env.PORT;
-
+const port = 3000;
 
 var blogs = [];
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
-app.use(bodyParser.json());
    
 // var blogitem;
 // var blogtitle;
@@ -26,7 +21,7 @@ app.use(bodyParser.json());
 
 // app.use(logger)
 
-app.post("/api/saveblog",(req,res)=>{
+app.post("/saveblog",(req,res)=>{
     const blogitem = req.body["blogdata"];
     const blogtitle = req.body["title"];
     blogs.push([blogtitle,blogitem]);
@@ -35,7 +30,7 @@ app.post("/api/saveblog",(req,res)=>{
 })
 
 
-app.post("/api/saveedited",(req,res)=>{
+app.post("/saveedited",(req,res)=>{
     const haha = req.body["j"];
     const a = req.body["title"];
     const b = req.body["blogdata"];
@@ -44,7 +39,7 @@ app.post("/api/saveedited",(req,res)=>{
     res.redirect("/gohome");
 })
 
-app.get("/api/edit",(req,res)=>{
+app.get("/edit",(req,res)=>{
     const editind = req.query.editindex;
     res.render("editblog.ejs",{
         blogs,
@@ -52,33 +47,33 @@ app.get("/api/edit",(req,res)=>{
     });
 });
 
-app.get("/api/deletee",(req,res)=>{
+app.get("/deletee",(req,res)=>{
     const delind = req.query.editindex;
     blogs.splice(delind,1);
     // res.render("index.ejs",{blogs});
     res.redirect("/gohome");
 });
 
-app.get("/api/viewblog",(req,res)=>{
+app.get("/viewblog",(req,res)=>{
     res.render("seeblog.ejs",{
         ind : req.query.index,
         blogs
     })
 });
 
-app.get("/api/gohome",(req,res)=>{
+app.get("/gohome",(req,res)=>{
     res.render("index.ejs",{blogs});
 });
 
-app.get("/api",(req,res)=>{
+app.get("/",(req,res)=>{
     blogs = [];
     res.render("index.ejs");
 });
 
-app.get("/api/postblog",(req,res)=>{
+app.get("/postblog",(req,res)=>{
     res.render("postblog.ejs");
 });
 
-app.listen(port);
-
-module.exports.handler = serverless(app);
+app.listen(port,()=>{
+    console.log("listening on "+ port);
+});
