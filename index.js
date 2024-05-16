@@ -74,6 +74,6 @@ app.get("/postblog",(req,res)=>{
     res.render("postblog.ejs");
 });
 
-app.listen(port,()=>{
+app.listen(process.env.PORT || port,()=>{
     console.log("listening on "+ port);
 });
